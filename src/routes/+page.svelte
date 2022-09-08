@@ -1,3 +1,7 @@
+<script>
+	import '../styles.scss';
+</script>
+
 <h1>Welcome to SvelteKit</h1>
 <p>
 	Visit <a class="link" href="https://kit.svelte.dev"
