@@ -1,9 +1,27 @@
-<h1>Welcome to SvelteKit</h1>
-<p>
-	Visit <a class="link" href="https://kit.svelte.dev"
-		>kit.svelte.dev <span class="link__span">aaaaaa</span></a
-	> to read the documentation
-</p>
+<script>
+	import Cta from './cta.svelte';
+	import Hero from './hero.svelte';
+	import InputUrl from './inputUrl.svelte';
+	import Statistic from './statistic.svelte';
+</script>
+
+<header>
+	<div class="background" style="--bg-color: var()">
+		<Hero />
+	</div>
+</header>
+
+<main>
+	<div class="background" style="--bg-color: var()">
+		<InputUrl />
+	</div>
+	<div class="background" style="--bg-color: var()">
+		<Statistic />
+	</div>
+	<div class="background" style="--bg-color: var()">
+		<Cta />
+	</div>
+</main>
 
 <style lang="scss">
 </style>
