@@ -1,8 +1,14 @@
 <script>
-	import Cta from './cta.svelte';
-	import Hero from './hero.svelte';
-	import InputUrl from './inputUrl.svelte';
-	import Statistic from './statistic.svelte';
+	import Cta from '../lib/cta.svelte';
+	import Hero from '../lib/hero.svelte';
+	import InputUrl from '../lib/inputUrl.svelte';
+	import ShowUrl from '../lib/showUrl.svelte';
+	import Statistic from '../lib/statistic.svelte';
+
+	/**
+	 * @type {object[]}
+	 */
+	let urls = [];
 </script>
 
 <header>
@@ -14,6 +20,11 @@
 <main>
 	<div class="background" style="--bg-color: var()">
 		<InputUrl />
+	</div>
+	<div class="background" style="--bg-color: var()">
+		{#each urls as url}
+			<ShowUrl />
+		{/each}
 	</div>
 	<div class="background" style="--bg-color: var()">
 		<Statistic />
