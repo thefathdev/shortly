@@ -1,14 +1,15 @@
 <script>
+	// @ts-nocheck
+
+	import storedUrls from '../store/store.js';
+
 	import Cta from '../lib/cta.svelte';
 	import Hero from '../lib/hero.svelte';
 	import InputUrl from '../lib/inputUrl.svelte';
 	import ShowUrl from '../lib/showUrl.svelte';
 	import Statistic from '../lib/statistic.svelte';
 
-	/**
-	 * @type {object[]}
-	 */
-	let urls = [];
+	let urlCouples = $storedUrls;
 </script>
 
 <header>
@@ -22,8 +23,8 @@
 		<InputUrl />
 	</div>
 	<div class="background" style="--bg-color: var()">
-		{#each urls as url}
-			<ShowUrl />
+		{#each urlCouples as urlCouple}
+			<ShowUrl {urlCouple} />
 		{/each}
 	</div>
 	<div class="background" style="--bg-color: var()">
