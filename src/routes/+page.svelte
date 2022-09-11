@@ -9,7 +9,7 @@
 	import ShowUrl from '../lib/showUrl.svelte';
 	import Statistic from '../lib/statistic.svelte';
 
-	let urlCouples = $storedUrls;
+	$: urlCouples = $storedUrls;
 </script>
 
 <header>

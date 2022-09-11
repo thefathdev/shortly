@@ -1,10 +1,9 @@
 <script>
+	// @ts-nocheck
+
 	import Button from './components/button.svelte';
 
-	export let urlCouple = {
-		initial: '',
-		shorten: ''
-	};
+	export let urlCouple;
 
 	let copyState = 'copy';
 

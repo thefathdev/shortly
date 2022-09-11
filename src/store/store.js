@@ -1,10 +1,5 @@
 import { writable } from 'svelte/store';
 
-let storedUrls = writable([
-	{
-		initial: 'htt',
-		shorten: 'ht'
-	}
-]);
+let storedUrls = writable([]);
 
 export default storedUrls;
