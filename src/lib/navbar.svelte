@@ -8,7 +8,23 @@
 
 <nav class="navbar">
 	<a href="/" class="navbar__logo"><img src="/images/logo.svg" alt="Shortly Logo" /></a>
-	<HamburgerMenuIcon on:clickMenu={(e) => (mobileMenu = e.detail)} />
-	<MobileMenu state={mobileMenu} />
+	<div class="navbar__hamburger-btn">
+		<HamburgerMenuIcon on:clickMenu={(e) => (mobileMenu = e.detail)} />
+	</div>
+	{#if mobileMenu === 'open'}
+		<MobileMenu />
+	{/if}
 	<DesktopMenu />
 </nav>
+
+<style lang="scss">
+	.navbar {
+		position: relative;
+		display: flex;
+		padding: 2em 1em;
+
+		&__hamburger-btn {
+			margin-left: auto;
+		}
+	}
+</style>

@@ -31,7 +31,7 @@
 		&__btn {
 			width: 26px;
 			height: 4px;
-			background-color: black;
+			background-color: var(--clr-neutral-500);
 			transition: background 300ms ease-in-out;
 
 			&::after,
@@ -40,7 +40,7 @@
 				position: absolute;
 				width: 26px;
 				height: 4px;
-				background-color: black;
+				background-color: var(--clr-neutral-500);
 			}
 
 			&::before {
