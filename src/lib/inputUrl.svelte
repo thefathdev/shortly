@@ -42,3 +42,7 @@
 
 	<Button on:click={() => handleShorten(initialUrl)}>shorten it</Button>
 </form>
+
+<style lang="scss">
+	// TODO: style input
+</style>

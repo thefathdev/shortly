@@ -14,6 +14,9 @@
 	--clr-neutral-700: hsl(255, 11%, 22%); //very dark blue
 	--clr-neutral-800: hsl(260, 8%, 14%); //very dark violet
 
+	// backgrounds
+	--bg-split: linear-gradient(180deg, hsl(0, 0%, 100%) 50%, hsla(0, 0%, 75%, 0.25) 50%);
+
 	// font-sizes
 	--fs-400: 1.125rem;
 

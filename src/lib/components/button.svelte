@@ -1,9 +1,16 @@
 <script>
 	export let type = 'primary';
 	export let corner = 'flat';
+	export let px = '0.5em';
+	export let py = '0.5em';
+	export let fontSize = '1em';
 </script>
 
-<button on:click|preventDefault class="{type} {corner}"><slot /></button>
+<button
+	on:click|preventDefault
+	class="{type} {corner}"
+	style="--py: {py}; --px:{px}; --fs:{fontSize}"><slot /></button
+>
 
 <style lang="scss">
 	button {
@@ -11,7 +18,8 @@
 		text-transform: capitalize;
 		border: none;
 		font-weight: var(--fw-bold);
-		padding: 0.5em;
+		padding: var(--py) var(--px);
+		font-size: var(--fs);
 
 		transition: background-color 300ms ease-in-out;
 	}

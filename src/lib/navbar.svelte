@@ -22,6 +22,7 @@
 		position: relative;
 		display: flex;
 		padding: 2em 1em;
+		background-color: var(--clr-neutral-0);
 
 		&__hamburger-btn {
 			margin-left: auto;

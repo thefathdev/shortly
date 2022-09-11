@@ -13,13 +13,13 @@
 </script>
 
 <header>
-	<div class="background" style="--bg-color: var()">
-		<Hero />
+	<div class="background" style="--bg-color: var(--clr-neutral-0)">
+		<Hero mb="3em" />
 	</div>
 </header>
 
 <main>
-	<div class="background" style="--bg-color: var()">
+	<div class="background" style="--bg-color: var(--bg-split)">
 		<InputUrl />
 	</div>
 	<div class="background" style="--bg-color: var()">
@@ -36,4 +36,7 @@
 </main>
 
 <style lang="scss">
+	.background {
+		background: var(--bg-color);
+	}
 </style>
