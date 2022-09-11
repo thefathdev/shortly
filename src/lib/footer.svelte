@@ -65,3 +65,54 @@
 		</li>
 	</ul>
 </footer>
+
+<style lang="scss">
+	ul,
+	li {
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+	}
+
+	.footer {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 3.5em 0;
+		background-color: var(--clr-neutral-800);
+		color: var(--clr-neutral-0);
+		font-size: 0.85em;
+
+		&__logo {
+			margin-bottom: 2.5em;
+
+			> svg > path {
+				fill: var(--clr-neutral-0);
+			}
+		}
+
+		&__heading {
+			margin-bottom: 1.5em;
+			font-weight: var(--fw-bold);
+		}
+
+		&__list {
+			margin-bottom: 2.5em;
+			display: flex;
+			flex-direction: column;
+			gap: 0.5em;
+		}
+
+		&__item {
+			font-weight: var(--fw-medium);
+			text-transform: capitalize;
+			text-align: center;
+		}
+
+		&__social-media {
+			display: flex;
+			flex-direction: row;
+			gap: 1.5em;
+		}
+	}
+</style>
