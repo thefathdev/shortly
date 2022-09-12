@@ -13,26 +13,26 @@
 </script>
 
 <header>
-	<div class="background" style="--bg-color: var(--clr-neutral-0)">
+	<section class="background" style="--bg-color: var(--clr-neutral-0)">
 		<Hero mb="3em" />
-	</div>
+	</section>
 </header>
 
 <main class="background" style="--bg-color: var(--clr-neutral-200)">
-	<div class="background" style="--bg-color: var(--bg-split)">
+	<section class="background" style="--bg-color: var(--bg-split)">
 		<InputUrl />
-	</div>
-	<div>
+	</section>
+	<section>
 		{#each urlCouples as urlCouple}
 			<ShowUrl {urlCouple} />
 		{/each}
-	</div>
-	<div>
+	</section>
+	<section>
 		<Statistic />
-	</div>
-	<div>
+	</section>
+	<section>
 		<Cta />
-	</div>
+	</section>
 </main>
 
 <style lang="scss">
