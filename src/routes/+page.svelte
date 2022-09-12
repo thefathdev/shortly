@@ -18,11 +18,11 @@
 	</div>
 </header>
 
-<main>
+<main class="background" style="--bg-color: var(--clr-neutral-200)">
 	<div class="background" style="--bg-color: var(--bg-split)">
 		<InputUrl />
 	</div>
-	<div class="background" style="--bg-color: var()">
+	<div>
 		{#each urlCouples as urlCouple}
 			<ShowUrl {urlCouple} />
 		{/each}

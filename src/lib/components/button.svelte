@@ -34,6 +34,9 @@
 	}
 
 	.round {
-		border-radius: 2em;
+		border-radius: 2rem;
+	}
+	.smooth {
+		border-radius: 0.3rem;
 	}
 </style>
