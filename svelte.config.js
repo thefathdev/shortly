@@ -6,7 +6,11 @@ const config = {
 	kit: {
 		adapter: adapter()
 	},
-	preprocess: sveltePreprocess()
+	preprocess: sveltePreprocess({
+		scss: {
+			prependData: "@import './src/styles/_mixin.scss';"
+		}
+	})
 };
 
 export default config;

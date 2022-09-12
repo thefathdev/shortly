@@ -7,25 +7,27 @@
 			/></svg
 		></a
 	>
-	<h4 class="footer__heading">Features</h4>
-	<ul class="footer__list">
-		<li class="footer__item">link shortening</li>
-		<li class="footer__item">branded links</li>
-		<li class="footer__item">analytics</li>
-	</ul>
-	<h4 class="footer__heading">Resources</h4>
-	<ul class="footer__list">
-		<li class="footer__item">blog</li>
-		<li class="footer__item">developers</li>
-		<li class="footer__item">support</li>
-	</ul>
-	<h4 class="footer__heading">Company</h4>
-	<ul class="footer__list">
-		<li class="footer__item">about</li>
-		<li class="footer__item">our team</li>
-		<li class="footer__item">careers</li>
-		<li class="footer__item">contact</li>
-	</ul>
+	<section class="footer__grid">
+		<h4 class="footer__heading">Features</h4>
+		<ul class="footer__list">
+			<li class="footer__item">link shortening</li>
+			<li class="footer__item">branded links</li>
+			<li class="footer__item">analytics</li>
+		</ul>
+		<h4 class="footer__heading">Resources</h4>
+		<ul class="footer__list">
+			<li class="footer__item">blog</li>
+			<li class="footer__item">developers</li>
+			<li class="footer__item">support</li>
+		</ul>
+		<h4 class="footer__heading">Company</h4>
+		<ul class="footer__list">
+			<li class="footer__item">about</li>
+			<li class="footer__item">our team</li>
+			<li class="footer__item">careers</li>
+			<li class="footer__item">contact</li>
+		</ul>
+	</section>
 	<ul class="footer__social-media">
 		<li>
 			<span class="visually-hidden">facebook</span>
@@ -83,6 +85,18 @@
 		color: var(--clr-neutral-0);
 		font-size: 0.85em;
 
+		@include desktop {
+			max-width: 68.75rem;
+			margin-inline: auto;
+			box-shadow: 0 0 0 100vmax var(--clr-neutral-800);
+			clip-path: inset(0 -100vmax);
+			padding: 4em 0;
+
+			display: grid;
+			grid-template-columns: 1fr 1.5fr 0.5fr;
+			align-items: start;
+		}
+
 		&__logo {
 			margin-bottom: 2.5em;
 
@@ -92,8 +106,14 @@
 		}
 
 		&__heading {
+			text-align: center;
 			margin-bottom: 1.5em;
 			font-weight: var(--fw-bold);
+
+			@include desktop {
+				grid-row: 1;
+				text-align: start;
+			}
 		}
 
 		&__list {
@@ -107,12 +127,24 @@
 			font-weight: var(--fw-medium);
 			text-transform: capitalize;
 			text-align: center;
+			color: var(--clr-neutral-300);
+
+			@include desktop {
+				text-align: start;
+			}
 		}
 
 		&__social-media {
 			display: flex;
 			flex-direction: row;
 			gap: 1.5em;
+		}
+
+		&__grid {
+			@include desktop {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+			}
 		}
 	}
 </style>

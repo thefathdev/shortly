@@ -24,8 +24,19 @@
 		padding: 2em 1em;
 		background-color: var(--clr-neutral-0);
 
+		@include desktop {
+			max-width: 68.75rem;
+			margin-inline: auto;
+			align-items: center;
+			padding: 3em 0;
+		}
+
 		&__hamburger-btn {
 			margin-left: auto;
+
+			@include desktop {
+				display: none;
+			}
 		}
 	}
 </style>

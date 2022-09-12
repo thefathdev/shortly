@@ -1,0 +1,6 @@
+// Media querry
+@mixin desktop {
+	@media (min-width: 36rem) {
+		@content;
+	}
+}
