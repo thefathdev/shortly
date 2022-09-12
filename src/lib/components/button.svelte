@@ -33,6 +33,15 @@
 		}
 	}
 
+	.secondary {
+		background-color: var(--clr-primary-2);
+		color: var(--clr-neutral-0);
+
+		&:hover {
+			background-color: var(--clr-primary-2-50);
+		}
+	}
+
 	.round {
 		border-radius: 2rem;
 	}

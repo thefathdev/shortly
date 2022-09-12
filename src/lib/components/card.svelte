@@ -13,10 +13,42 @@
 
 <style lang="scss">
 	.card {
+		position: relative;
+		background-color: var(--clr-neutral-0);
+		border-radius: 0.3em;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		padding: 4em 2em 2.5em;
+
+		&:not(:last-child) {
+			margin-bottom: 5em;
+		}
+
 		&__icon {
-			width: 40px;
-			height: 40px;
+			position: absolute;
+			top: 0;
+			width: 85px;
+			height: 85px;
+			border-radius: 50%;
 			background-image: var(--icon-url);
+			background-position: center;
+			background-repeat: no-repeat;
+			background-color: var(--clr-primary-2);
+			transform: translateY(-50%);
+		}
+
+		&__heading {
+			margin-bottom: 0.75em;
+			text-align: center;
+			color: var(--clr-neutral-800);
+		}
+
+		&__body {
+			text-align: center;
+			font-size: 0.85em;
+			color: var(--clr-neutral-500);
+			line-height: 1.6;
 		}
 	}
 </style>

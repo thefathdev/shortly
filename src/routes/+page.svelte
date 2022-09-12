@@ -27,10 +27,10 @@
 			<ShowUrl {urlCouple} />
 		{/each}
 	</div>
-	<div class="background" style="--bg-color: var()">
+	<div>
 		<Statistic />
 	</div>
-	<div class="background" style="--bg-color: var()">
+	<div>
 		<Cta />
 	</div>
 </main>

@@ -19,3 +19,37 @@
 		<Card {title} body={bodies[i]} />
 	{/each}
 </div>
+
+<style lang="scss">
+	.heading {
+		margin-bottom: 0.625em;
+		text-align: center;
+		color: var(--clr-neutral-800);
+	}
+
+	.lead {
+		margin-bottom: 5.5em;
+		margin-inline: 1em;
+		text-align: center;
+		color: var(--clr-neutral-500);
+		font-size: 0.9em;
+		line-height: 1.6;
+	}
+
+	.container {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		margin: 1em;
+	}
+
+	.line {
+		position: absolute;
+		background-color: var(--clr-primary-1);
+		height: 90%;
+		width: 8px;
+		align-self: center;
+		justify-self: center;
+		margin-top: 10%;
+	}
+</style>
