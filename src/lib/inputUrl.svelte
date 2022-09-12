@@ -23,17 +23,30 @@
 			initialUrl = '';
 
 			storedUrls.update((data) => {
-				return [...data, urlCouple];
+				return [urlCouple, ...data];
 			});
 		} catch (error) {
 			console.log(error);
 		}
 	}
 
+	// url validation
+	let urlPattern = new RegExp(
+		'^(https?:\\/\\/)?' +
+			'((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|' +
+			'((\\d{1,3}\\.){3}\\d{1,3}))' +
+			'(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*' +
+			'(\\?[;&a-z\\d%_.~+=-]*)?' +
+			'(\\#[-a-z\\d_]*)?$',
+		'i'
+	);
+
 	const handleShorten = (url) => {
-		// TODO: add validation
 		if (url.length < 1) {
 			errorMessage = 'Please add a link';
+			inputValid = 'false';
+		} else if (!url.match(urlPattern)) {
+			errorMessage = 'Make sure your link is valid';
 			inputValid = 'false';
 		} else {
 			shortenUrl(url);
