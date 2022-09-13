@@ -8,12 +8,12 @@
 
 <button
 	on:click|preventDefault
-	class="{type} {corner}"
+	class="button {type} {corner}"
 	style="--py: {py}; --px:{px}; --fs:{fontSize}"><slot /></button
 >
 
 <style lang="scss">
-	button {
+	.button {
 		cursor: pointer;
 		text-transform: capitalize;
 		border: none;
@@ -47,5 +47,9 @@
 	}
 	.smooth {
 		border-radius: 0.3rem;
+
+		@include desktop {
+			border-radius: 0.4rem;
+		}
 	}
 </style>

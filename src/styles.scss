@@ -10,14 +10,14 @@
 	--clr-primary-2-50: hsl(258, 25%, 45%); //light dark violet
 	--clr-secondary: hsl(0, 87%, 67%); //red
 	--clr-neutral-0: hsl(0, 0%, 100%); //white
-	--clr-neutral-200: hsl(0, 0%, 95%); //light gray
+	--clr-neutral-200: hsl(225, 33%, 95%); //light gray
 	--clr-neutral-300: hsl(0, 0%, 75%); //gray
 	--clr-neutral-500: hsl(257, 7%, 63%); //grayish violet
 	--clr-neutral-700: hsl(255, 11%, 22%); //very dark blue
 	--clr-neutral-800: hsl(260, 8%, 14%); //very dark violet
 
 	// backgrounds
-	--bg-split: linear-gradient(180deg, hsl(0, 0%, 100%) 50%, hsl(0, 0%, 95%) 50%);
+	--bg-split: linear-gradient(180deg, hsl(0, 0%, 100%) 50%, hsl(225, 33%, 95%) 50%);
 
 	// font-sizes
 	--fs-400: 1.125rem;

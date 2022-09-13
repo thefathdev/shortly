@@ -124,10 +124,16 @@
 		}
 
 		&__item {
+			cursor: pointer;
 			font-weight: var(--fw-medium);
 			text-transform: capitalize;
 			text-align: center;
 			color: var(--clr-neutral-300);
+			transition: color 300ms ease-in-out;
+
+			&:hover {
+				color: var(--clr-primary-1);
+			}
 
 			@include desktop {
 				text-align: start;
@@ -138,6 +144,18 @@
 			display: flex;
 			flex-direction: row;
 			gap: 1.5em;
+
+			> li {
+				cursor: pointer;
+			}
+
+			> li > svg > path {
+				transition: fill 300ms ease-in-out;
+			}
+
+			> li:hover > svg > path {
+				fill: var(--clr-primary-1);
+			}
 		}
 
 		&__grid {

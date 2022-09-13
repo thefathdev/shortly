@@ -68,7 +68,8 @@
 	/>
 	<p class="input-url__error-message">{errorMessage}</p>
 
-	<Button corner="smooth" on:click={() => handleShorten(initialUrl)}>shorten it</Button>
+	<Button px="2.25em" corner="smooth" on:click={() => handleShorten(initialUrl)}>shorten it!</Button
+	>
 </form>
 
 <style lang="scss">
@@ -85,14 +86,35 @@
 		background-color: var(--clr-primary-2);
 		border-radius: 0.5em;
 
+		@include desktop {
+			position: relative;
+			max-width: 68.75rem;
+			margin-inline: auto;
+			flex-direction: row;
+			flex-wrap: wrap;
+			padding: 2.85em 3.5em;
+			border-radius: 0.75em;
+			background-image: url('/images/bg-shorten-desktop.svg');
+		}
+
 		&__input {
 			padding: 0.625em 1em;
 			border: none;
 			border-radius: 0.3rem;
 
+			@include desktop {
+				flex: 1;
+				border-radius: 0.4rem;
+				padding: 0.9em 1.75em;
+			}
+
 			&::placeholder {
 				color: var(--clr-neutral-700);
 				font-size: 0.875em;
+
+				@include desktop {
+					font-size: 1.125em;
+				}
 			}
 		}
 
@@ -110,6 +132,14 @@
 			font-weight: var(--fw-medium);
 			font-style: italic;
 			margin-top: -0.4em;
+
+			@include desktop {
+				position: absolute;
+				font-size: 0.9em;
+				top: 0;
+				left: 0;
+				transform: translateX(3.5em) translateY(calc(7.5em + 15%));
+			}
 		}
 	}
 </style>

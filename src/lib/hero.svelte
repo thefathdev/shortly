@@ -19,13 +19,29 @@
 
 <style lang="scss">
 	.hero {
+		@include desktop {
+			max-width: 68.75rem;
+			margin-inline: auto;
+			align-items: center;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+		}
+
 		&__img {
 			overflow: hidden;
+
+			@include desktop {
+				overflow: visible;
+			}
 
 			img {
 				min-width: 135%;
 				height: auto;
 				margin-left: 1.25em;
+
+				@include desktop {
+					margin-left: 6em;
+				}
 			}
 		}
 
@@ -34,11 +50,22 @@
 			display: flex;
 			flex-direction: column;
 			align-items: center;
+
+			@include desktop {
+				grid-column: 1;
+				grid-row: 1;
+				align-items: start;
+				padding: 0;
+			}
 		}
 
 		&__heading,
 		&__lead {
 			text-align: center;
+
+			@include desktop {
+				text-align: start;
+			}
 		}
 
 		&__heading {
@@ -47,11 +74,21 @@
 			font-size: 2.25em;
 			font-weight: var(--fw-bold);
 			color: var(--clr-neutral-700);
+
+			@include desktop {
+				font-size: 4.125em;
+				margin-bottom: 0;
+			}
 		}
 
 		&__lead {
 			margin-bottom: 1.75em;
 			color: var(--clr-neutral-500);
+
+			@include desktop {
+				font-size: 1.25em;
+				margin-bottom: 1.5em;
+			}
 		}
 	}
 </style>

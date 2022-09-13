@@ -50,6 +50,11 @@
 			font-weight: var(--fw-bold);
 			font-size: 0.85em;
 			color: var(--clr-neutral-500);
+			transition: color 300ms ease-in-out;
+
+			&:hover {
+				color: var(--clr-neutral-700);
+			}
 		}
 	}
 </style>

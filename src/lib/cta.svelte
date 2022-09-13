@@ -23,6 +23,15 @@
 			margin-bottom: 0.5em;
 			color: var(--clr-neutral-0);
 			font-size: 1.5em;
+
+			@include desktop {
+				font-size: 2.25em;
+			}
+		}
+
+		@include desktop {
+			padding: 3.5em 1em;
+			background-image: url('/images/bg-boost-desktop.svg');
 		}
 	}
 </style>

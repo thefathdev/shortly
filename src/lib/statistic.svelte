@@ -22,9 +22,16 @@
 
 <style lang="scss">
 	.heading {
+		margin-top: 3.5em;
 		margin-bottom: 0.625em;
 		text-align: center;
-		color: var(--clr-neutral-800);
+		color: var(--clr-neutral-700);
+		letter-spacing: -0.025em;
+
+		@include desktop {
+			font-size: 2.25em;
+			margin-bottom: 0.3em;
+		}
 	}
 
 	.lead {
@@ -34,6 +41,13 @@
 		color: var(--clr-neutral-500);
 		font-size: 0.9em;
 		line-height: 1.6;
+
+		@include desktop {
+			font-size: 1em;
+			max-width: 47ch;
+			margin-inline: auto;
+			line-height: 1.7;
+		}
 	}
 
 	.container {
@@ -41,6 +55,15 @@
 		display: flex;
 		flex-direction: column;
 		margin: 1em;
+
+		@include desktop {
+			margin-bottom: 6.5em;
+			max-width: 68.75rem;
+			margin-inline: auto;
+			flex-direction: row;
+			gap: 1.75em;
+			align-items: flex-start;
+		}
 	}
 
 	.line {
@@ -51,5 +74,11 @@
 		align-self: center;
 		justify-self: center;
 		margin-top: 10%;
+
+		@include desktop {
+			width: 90%;
+			height: 8px;
+			margin-top: 0;
+		}
 	}
 </style>

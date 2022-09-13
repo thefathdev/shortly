@@ -21,8 +21,28 @@
 		align-items: center;
 		padding: 4em 2em 2.5em;
 
+		@include desktop {
+			align-items: flex-start;
+		}
+
 		&:not(:last-child) {
 			margin-bottom: 5em;
+
+			@include desktop {
+				margin-bottom: 0;
+			}
+		}
+
+		&:nth-child(3) {
+			@include desktop {
+				margin-top: 2em;
+			}
+		}
+
+		&:nth-child(4) {
+			@include desktop {
+				margin-top: 4em;
+			}
 		}
 
 		&__icon {
@@ -41,7 +61,11 @@
 		&__heading {
 			margin-bottom: 0.75em;
 			text-align: center;
-			color: var(--clr-neutral-800);
+			color: var(--clr-neutral-700);
+
+			@include desktop {
+				text-align: start;
+			}
 		}
 
 		&__body {
@@ -49,6 +73,10 @@
 			font-size: 0.85em;
 			color: var(--clr-neutral-500);
 			line-height: 1.6;
+
+			@include desktop {
+				text-align: start;
+			}
 		}
 	}
 </style>
