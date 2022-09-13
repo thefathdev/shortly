@@ -52,7 +52,8 @@
 			color: var(--clr-neutral-500);
 			transition: color 300ms ease-in-out;
 
-			&:hover {
+			&:hover,
+			&:focus {
 				color: var(--clr-neutral-700);
 			}
 		}

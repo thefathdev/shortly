@@ -28,7 +28,8 @@
 		background-color: var(--clr-primary-1);
 		color: var(--clr-neutral-0);
 
-		&:hover {
+		&:hover,
+		&:focus {
 			background-color: var(--clr-primary-1-50);
 		}
 	}
@@ -37,7 +38,8 @@
 		background-color: var(--clr-primary-2);
 		color: var(--clr-neutral-0);
 
-		&:hover {
+		&:hover,
+		&:focus {
 			background-color: var(--clr-primary-2-50);
 		}
 	}
