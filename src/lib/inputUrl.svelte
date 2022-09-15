@@ -1,6 +1,6 @@
 <script>
 	// @ts-nocheck
-	import storedUrls from '../store/store';
+	import { storedUrls } from '../store/store';
 
 	import Button from './components/button.svelte';
 

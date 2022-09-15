@@ -1,7 +1,10 @@
+// @ts-nocheck
 import { writable } from 'svelte/store';
 
-let storedUrls = writable([]);
+import { browser } from '$app/environment';
 
-export default storedUrls;
+const stored = browser && localStorage.getItem('content');
 
-// TODO: add local storage feature
+export const storedUrls = writable(stored ? JSON.parse(stored) : []);
+
+storedUrls.subscribe((data) => browser && localStorage.setItem('content', JSON.stringify(data)));

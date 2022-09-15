@@ -1,7 +1,7 @@
 <script>
 	// @ts-nocheck
 
-	import storedUrls from '../store/store.js';
+	import { storedUrls } from '../store/store.js';
 
 	import Cta from '../lib/cta.svelte';
 	import Hero from '../lib/hero.svelte';
