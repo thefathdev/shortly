@@ -136,6 +136,14 @@
 			gap: 0.5em;
 		}
 
+		&__item {
+			align-self: center;
+
+			@include desktop {
+				align-self: flex-start;
+			}
+		}
+
 		&__item > a {
 			cursor: pointer;
 			font-weight: var(--fw-medium);

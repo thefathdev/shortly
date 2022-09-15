@@ -14,7 +14,6 @@
 	</ul>
 </section>
 
-<!-- TODO: Desktop menu -->
 <style lang="scss">
 	ul,
 	li {
